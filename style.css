@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*fuente externa*/
+@font-face{
+    font-family: get_schwifty;
+    src: url(./fonts/get_schwifty.ttf);
+}
+
+body{
+    height: 100vh;  
+    background-color: #0f2233;
+    background-image: url(images/galaxiagreen.jpg); 
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header{
+    height: 90px;
+    width: 100%;
+    background-color: black;
+    background-image: url(images/stars.png);
+    align-items: center;
+    font-family: get_schwifty;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header img{
+     width: 80px;
+     height: 80px ;
+     object-fit: cover;
+}
+
+.logo{
+    font-size: 50px;
+    margin: 10px;
+    color: rgb(17,176,200);
+    text-shadow: -2px -2px 1px  rgba(187,218,64,1),2px -2px 1px  rgba(187,218,64,1),
+    -2px 2px 1px  rgba(187,218,64,1), 2px -2px 1px  rgba(187,218,64,1); 
+    animation: myAnim 2s ease infinite normal forwards;
+}
+/*Animacion de logo*/
+@keyframes myAnim {
+	0% {
+		opacity: 1;
+	}
+    50% {
+		opacity: 0.2;
+	}
+    100% {
+		opacity: 1;
+    }
+}
+
+ul{
+    list-style: none;
+    display: flex;  
+}
+a{
+    font-size: 20px;
+    text-decoration: none; 
+}
+
+a, h2 ,h3{
+    font-family: 'Staatliches', cursive;
+}
+
+header a{
+    color:  #26ee9e;
+    margin: 15px;   
+}
+
+header a:hover{
+    background : linear-gradient(90deg, #26ee9e,#63cdd5,#20a7c9 );
+    padding: 5px;
+    border-radius: 5px;
+    color: black;  
+}
+
+.horizontal-line{
+    width: 100%;
+    height: 2px;
+    background-color:#26ee9e ;
+}
+
+main{
+    width: 100%;
+    padding: 20px 0px; 
+    font-family: 'Trispace', sans-serif;
+    color: white;    
+}
+   
+h2{
+    color: #26ee9e;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 10px; 
+    margin: 10px; 
+    background-color: black;
+    background-image: url(images/stars.png);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+h2:hover{
+    background : linear-gradient(90deg, #26ee9e,#63cdd5,#20a7c9 );
+    color: black;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-container{
+    width: 400px ;
+    height: 250px;
+    padding: 15px;
+    margin: 10px;
+    background-color: black;
+    background-image: url(images/stars.png);
+    border-radius: 10px;
+    border: 5px solid #26ee9e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container:hover{
+    border: 5px solid purple;
+    cursor: pointer;
+}
+
+.image-card{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;  
+}
+.image-container{
+   padding: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.info-card{
+    margin-left: 15px
+}
+.info-text{
+    margin: 5px;
+}
+.green-text{
+    color:#26ee9e ;
+}
+
+h3{
+    letter-spacing: 2px;
+    color: purple;
+}
+
+.main-p{
+    margin: 15px;
+}
+
+.episodes a{
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    color: white;
+}
+
+ .hbo-button{
+    background-color: #8318df;
+}
+
+.youtube-button{
+    background-color: #ff0000;
+}
+
+footer{
+    background-color: black;
+    background-image: url(images/stars.png);
+    height: 80px;
+    width: 100%;
+    color:#26ee9e;
+    font-family: 'Trispace', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+footer p{
+     margin: 5px;
+ }
+footer li{
+     margin: 5px;
+ }
+
+.footer-icon{
+    width: 30px;
+    height: 30px;
+}
+.ada{
+    background : linear-gradient(90deg, #26ee9e,#63cdd5,#20a7c9 );
+    color:black;
+    margin: 5px; 
+    font-family: 'Trispace', sans-serif;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px; 
+    font-weight: bold;
+}
+.arrow-icon{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height:50px ;
+}
+
+@media (max-width: 880px){
+
+.logo{
+    font-size: 25px;
+}
+.card-container{
+    font-size: 15px;
+    padding: 5px;
+    width: 350px ;
+    height: 200px;
+}
+.image-card{
+    width: 100px;
+    height: 100px;   
+}
+}
+
+@media (max-width: 480px){
+header{
+    flex-direction: column;
+    position: relative;
+    padding:25%;  
+} 
+
+header img{
+    height: 50px ;
+    width: 50px ;
+    margin: 0px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.logo{
+    font-size: 25px;
+ }
+ .card-container{
+     width: 300px;
+     height:150px ;
+     font-size: 10px;
+ }
+ 
+.main-p,.episodes a,footer p{
+    font-size: 12px;
+} 
+
+footer li{
+    margin: 2px;
+}
+footer img{
+    width: 15px;
+    height: 15px;
+}
+.arrow-icon{
+    width: 30px;
+    height: 30px;
+    bottom: 25px;
+}
+}
